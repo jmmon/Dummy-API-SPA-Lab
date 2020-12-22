@@ -1,0 +1,39 @@
+<div class="posts">
+    <div class="row justify-content-center">
+        {{#each posts}}
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" style="margin-top: 50px;">
+            <div class="card">
+
+                <img src="{{this.picture}}"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}} {{this.firstName}} {{this.lastName}}</h5>
+                    <p>
+                        Email: <a href="{{mailto:this.email}}">{{this.email}}</a>
+                    </p>
+                    <a href="/details/{{this.id}}" class="btn btn-primary">View Profile</a>
+
+
+
+
+                    {{!-- {{#if this.comments}}
+                    <ul class="list-group">
+                        {{#each this.comments}}
+                        <li class="list-group-item">{{getShortComment this}}</li>
+                        {{/each}}
+                    </ul>
+
+                    {{else}}
+                    <ul class="list-group">
+                        <li class="list-group-item">Be the first to comment on this post!</li>
+                    </ul>
+                    {{/if}} --}}
+
+                </div>
+            </div>
+        </div>
+        
+        {{/each}}
+    </div>
+</div>
